@@ -1,9 +1,8 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "pnpm --filter '@caffeine/template-frontend' run build",
+  "buildCommand": "cd src/frontend && pnpm install && pnpm build",
   "outputDirectory": "src/frontend/dist",
-  "framework": null,
+  "framework": "vite",
   "rewrites": [
-    { "source": "/((?!assets|env\.json).*)", "destination": "/index.html" }
+    { "source": "/((?!assets|env\\.json).*)", "destination": "/index.html" }
   ]
 }
