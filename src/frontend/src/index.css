@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Dark theme — charcoal/gold/burgundy */
+    --background: 20 0.01 60;
+    --foreground: 94 0.015 75;
+    --card: 22 0.01 60;
+    --card-foreground: 94 0.015 75;
+    --popover: 22 0.01 60;
+    --popover-foreground: 94 0.015 75;
+    --primary: 72 0.12 78;
+    --primary-foreground: 20 0.01 20;
+    --secondary: 30 0.01 35;
+    --secondary-foreground: 94 0.015 75;
+    --muted: 25 0.01 30;
+    --muted-foreground: 70 0.02 65;
+    --accent: 72 0.12 78;
+    --accent-foreground: 20 0.01 20;
+    --destructive: 50 0.22 27;
+    --destructive-foreground: 94 0.015 75;
+    --border: 25 0.02 40;
+    --input: 25 0.02 40;
+    --ring: 72 0.12 78;
+    --radius: 0.25rem;
+    --chart-1: 72 0.12 78;
+    --chart-2: 50 0.22 27;
+    --chart-3: 70 0.08 60;
+    --chart-4: 60 0.15 50;
+    --chart-5: 40 0.1 40;
+    --sidebar: 20 0.01 18;
+    --sidebar-foreground: 94 0.015 75;
+    --sidebar-primary: 72 0.12 78;
+    --sidebar-primary-foreground: 20 0.01 20;
+    --sidebar-accent: 25 0.01 30;
+    --sidebar-accent-foreground: 94 0.015 75;
+    --sidebar-border: 25 0.02 35;
+    --sidebar-ring: 72 0.12 78;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", sans-serif;
+    background-color: #1b1f22;
+    color: #f2eee6;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Playfair Display", serif;
+  }
+}
+
+@layer utilities {
+  .font-playfair {
+    font-family: "Playfair Display", serif;
+  }
+  .font-inter {
+    font-family: "Inter", sans-serif;
+  }
+  .text-gold {
+    color: #c6a35b;
+  }
+  .bg-gold {
+    background-color: #c6a35b;
+  }
+  .border-gold {
+    border-color: #c6a35b;
+  }
+  .bg-charcoal {
+    background-color: #1b1f22;
+  }
+  .bg-charcoal-light {
+    background-color: #2a2f33;
+  }
+  .bg-burgundy {
+    background-color: #3b0d0d;
+  }
+  .bg-burgundy-light {
+    background-color: #5a1414;
+  }
+  .text-offwhite {
+    color: #f2eee6;
+  }
+  .text-muted-warm {
+    color: #b9b2a6;
+  }
+
+  /* ─── FIX 1: Hero text shadow — depth & legibility against photo ─── */
+  .hero-text-shadow {
+    text-shadow: 0 2px 40px rgba(0, 0, 0, 0.9), 0 4px 80px rgba(0, 0, 0, 0.6), 0
+      1px 0 rgba(198, 163, 91, 0.2);
+  }
+  .hero-sub-shadow {
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8), 0 0 60px
+      rgba(198, 163, 91, 0.15);
+  }
+
+  /* ─── FIX 2: Menu card gold ring glow on hover ─────────────────── */
+  .ring-gold-hover {
+    transition: box-shadow 0.5s ease, transform 0.5s ease;
+  }
+  .ring-gold-hover:hover {
+    box-shadow: 0 0 0 3px #c6a35b, 0 0 25px rgba(198, 163, 91, 0.5), 0 0 60px
+      rgba(198, 163, 91, 0.2);
+    transform: scale(1.04);
+  }
+
+  /* ─── FIX 3: Metallic gold buttons — gradient sheen + press state ── */
+  .btn-gold-metallic {
+    background: linear-gradient(
+      to bottom,
+      #d4b87a 0%,
+      #c6a35b 55%,
+      #aa8840 100%
+    );
+    box-shadow: inset 0 1px 0 rgba(255, 245, 200, 0.35);
+    transition: all 0.25s ease;
+  }
+  .btn-gold-metallic:hover {
+    background: linear-gradient(
+      to bottom,
+      #dfc78a 0%,
+      #d4b87a 55%,
+      #c6a35b 100%
+    );
+    box-shadow: inset 0 1px 0 rgba(255, 245, 200, 0.45), 0 0 28px
+      rgba(198, 163, 91, 0.55), 0 0 60px rgba(198, 163, 91, 0.18);
+  }
+  .btn-gold-metallic:active {
+    transform: scale(0.975);
+    background: linear-gradient(to bottom, #c6a35b 0%, #aa8840 100%);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  /* outlined gold button hover (secondary CTAs) */
+  .btn-gold-outline:hover {
+    box-shadow: 0 0 20px rgba(198, 163, 91, 0.3), 0 0 40px
+      rgba(198, 163, 91, 0.1);
+  }
+  .btn-gold-outline:active {
+    transform: scale(0.975);
+  }
+
+  /* legacy — kept for compatibility */
+  .gold-glow:hover {
+    box-shadow: 0 0 28px rgba(198, 163, 91, 0.55), 0 0 60px
+      rgba(198, 163, 91, 0.18);
+  }
+
+  .section-divider {
+    background: linear-gradient(to right, transparent, #c6a35b40, transparent);
+    height: 1px;
+  }
+}
