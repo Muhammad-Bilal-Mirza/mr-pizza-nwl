@@ -1000,12 +1000,12 @@ function Footer() {
           <p className="font-inter text-xs text-offwhite/35 text-center">
             © {year}.{" "}
             <a
-              href={`https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=${encodeURIComponent(hostname)}`}
+              href="https://YasinForge.rf.gd"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-gold/70 transition-colors"
             >
-              Built with ❤️ using caffeine.ai
+              Built by YasinForge
             </a>
           </p>
         </div>
