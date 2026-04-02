@@ -1,0 +1,63 @@
+# Auto detect text files and normalize line endings to LF
+* text=auto
+
+# Image files - treat as binary
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.gif binary
+*.webp binary
+*.svg binary
+*.ico binary
+*.avif binary
+
+# Videos - treat as binary
+*.mp4 binary
+*.webm binary
+*.mov binary
+*.mkv binary
+
+# Audio - treat as binary
+*.mp3 binary
+*.wav binary
+*.m4a binary
+*.aac binary
+
+# Archives - treat as binary
+*.zip binary
+*.tar binary
+*.gz binary
+*.7z binary
+*.rar binary
+
+# Fonts - treat as binary
+*.ttf binary
+*.otf binary
+*.woff binary
+*.woff2 binary
+
+# PDFs and documents - treat as binary
+*.pdf binary
+*.doc binary
+*.docx binary
+*.xls binary
+*.xlsx binary
+
+# Compiled/binary files
+*.wasm binary
+*.o binary
+*.a binary
+*.so binary
+*.dylib binary
+*.dll binary
+*.exe binary
+
+# Keep YAML, JSON, JS, TS files with LF endings
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.js text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.jsx text eol=lf
+*.md text eol=lf
