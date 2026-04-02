@@ -1,6 +1,6 @@
 {
-  "installCommand": "pnpm install",
-  "buildCommand": "pnpm --filter '@caffeine/template-frontend' run build",
+  "installCommand": "npm install --prefix src/frontend",
+  "buildCommand": "npm run build --prefix src/frontend",
   "outputDirectory": "src/frontend/dist",
   "framework": "vite"
 }
