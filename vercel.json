@@ -1,8 +1,6 @@
 {
-  "buildCommand": "cd src/frontend && pnpm install && pnpm build",
+  "installCommand": "pnpm install",
+  "buildCommand": "pnpm --filter '@caffeine/template-frontend' run build",
   "outputDirectory": "src/frontend/dist",
-  "framework": "vite",
-  "rewrites": [
-    { "source": "/((?!assets|env\\.json).*)", "destination": "/index.html" }
-  ]
+  "framework": "vite"
 }
